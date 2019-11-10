@@ -1,0 +1,30 @@
+.btn {
+  line-height: 2rem;
+}
+
+.btn-default {
+  background: $gold;
+  color: $white;
+  &:hover{
+    background: $black;
+  }
+}
+
+.btn-black {
+  background: $black;
+  color: $white;
+  &:hover{
+    background: $gold;
+    color: $white;
+  }
+}
+
+
+.btn-gold {
+  background: $gold;
+  color: $white;
+  &:hover{
+    background: $black;
+    color: $white;
+  }
+}

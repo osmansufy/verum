@@ -1,0 +1,223 @@
+.single-hero-img {
+  margin-top: -5rem;
+  margin-bottom: 5rem;
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.meta-row {
+  margin: 5rem 0 3rem 0;
+  padding-bottom: 4.5rem;
+  border-bottom: 1px solid $border-color;
+}
+.meta-tags {
+  float: left;
+  margin-top: .5rem;
+  span{
+    padding-right: .5rem;
+  }
+  a{
+    position: relative;
+    margin-right: .3rem;
+    &:after{
+      padding-left: .3rem;
+      content: ',';
+    }
+  }
+  a:last-child{
+    &:after{
+      content: ' ';
+    }
+  }
+}
+
+.meta-share {
+  float: right;
+  .share-btn {
+    border: 1px solid $border-color;
+    padding: 3px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: .5rem;
+    position: relative;
+    z-index: 50;
+    background: $white;
+    transition: .3s all;
+    &:hover{
+      border-color: $gold;
+      background: $gold;
+      color: $white;
+    }
+  }
+  .social-links {
+    display: inline-block;
+    opacity: 0;
+    transition: .3s all;
+    position: relative;
+    right: -100px;
+    a{
+      border: 1px solid $border-color;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      display: inline-block;
+      border-radius: 40px;
+      margin: 0 .2rem;
+      &:hover{
+        border-color: $gold;
+        background: $gold;
+        color: $white;
+      }
+    }
+  }
+
+  .social-links.open {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+.post-blog {
+//  img{
+//    width: 100%;
+//    height: auto;
+//  }
+  blockquote {
+//    border-top: 1px solid $border-color;
+//    border-bottom: 1px solid $border-color;
+    padding: 40px 5%;
+    text-align: center;
+    position: relative;
+    margin: 50px 0;
+    &:before{
+      content: '';
+      height: 1px;
+      background: $border-color;
+      width: 50%;
+      display: block;
+      left: 50%;
+      margin-left: -25%;
+      top: 0;
+      text-align: center;
+      position: absolute;
+    }
+
+    &:after{
+      content: '';
+      height: 1px;
+      background: $border-color;
+      width: 50%;
+      display: block;
+      left: 50%;
+      margin-left: -25%;
+      bottom: 0;
+      text-align: center;
+      position: absolute;
+    }
+    p {
+      font-size: 18px;
+      line-height: 28px;
+      font-style: italic;
+      margin: 0;
+      position: relative;
+      &:before{
+        content: '\f10e';
+        font-family: fontawesome;
+        left: 46%;
+        top: -52px;
+        text-align: center;
+        position: absolute;
+        background: $white;
+        padding: 0 10px;
+        color: $border-color;
+        z-index: 10;
+      }
+      &:after{
+        content: '\f10d';
+        font-family: fontawesome;
+        left: 46%;
+        bottom: -52px;
+        text-align: center;
+        position: absolute;
+        background: $white;
+        padding: 0 10px;
+        color: $border-color;
+        z-index: 10;
+      }
+    }
+  }
+}
+
+.post-author-info {
+  margin-bottom: 60px;
+  margin-top: 60px;
+  padding-bottom: 60px;
+  overflow: hidden;
+  border-bottom: 1px solid $border-color;
+  .author-thumb {
+    float: left;
+    margin-right: 3rem;
+    width: 180px;
+
+  }
+  .author-details {
+    h5 {
+      margin-bottom: 15px;
+      a {
+        font-size: 18px;
+        margin-bottom: 8px;
+        color: $black;
+        &:hover{
+          color: $gold;
+        }
+      }
+    }
+    p{
+      font-style: italic;
+      margin-bottom: 15px;
+    }
+    .s-links {
+      a {
+        margin-right: 10px;
+        color: $gray;
+        &:hover{
+          color: $gold;
+        }
+      }
+    }
+  }
+}
+
+
+.post-single-title {
+  margin-bottom: 5rem;
+  font-size: 28px;
+}
+
+.related-post {
+  h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 991px) {
+  .single-hero-img, .post-single-title {
+    margin-bottom: 3rem;
+  }
+
+  .post-single-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .post-single-title {
+    font-size: 1.2rem;
+  }
+}
